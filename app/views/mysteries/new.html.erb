@@ -1,0 +1,23 @@
+<h1> Add a new mystery to solve</h1>
+<%= form_for @mystery do |f| %>
+    <% if @mystery.errors.any? %>
+    <h2>There were some errors:</h2>
+        <ul>
+          <% @mystery.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+    <% end %>
+    <%=f.label :Mystery %>
+    <%=f.text_field :name %> <br><br>
+
+    <%=f.label :student %>
+    <%= f.collection_select :student_id, @students, :id, :name %><br><br>
+    
+    <%=f.label :solved %>
+    <%=f.check_box :solved %> <br><br>
+
+    <%= f.submit %>
+<% end %>
+
+<h5> <%= link_to "Back to Riverdale High", students_path %> </h5>

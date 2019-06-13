@@ -1,0 +1,18 @@
+<h1><%= @student.name %></h1>
+
+<h2>Age: <%= @student.age %></h2>
+
+<h3> Mysteries: </h3>
+<% @student.mysteries.each do |mystery| %>
+    <ul>
+        <li>
+            <%= link_to mystery.name, mystery_path(mystery) %>
+        </li>
+    </ul>
+<% end %>
+
+
+<br>
+<%= button_to "Delete #{@student.name}", @student, method: :delete %>
+<br>
+<h5> <%= link_to "Back to Riverdale High", students_path %> </h5>

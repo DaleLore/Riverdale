@@ -1,0 +1,2 @@
+      invoke  active_record
+   identical    db/migrate/20190612204944_add_column_to_mysteries.rb

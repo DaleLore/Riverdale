@@ -1,0 +1,19 @@
+<h1> Unsolved mystery: <%=@mystery.name%> </h1>
+
+
+Who is involved?
+<br>
+<%= link_to @mystery.student.name, student_path(@mystery.student) if @mystery.student%>
+<br>
+<br>
+What is the mystery!??!?!
+<br>
+<br>
+WHY?!?
+We don't know
+<br><br>
+
+<%= button_to "Delete #{@mystery.name}", @mystery, method: :delete, data: {confirm: "Honestly it's for the best"} %>
+
+<br><br>
+<%= link_to "Back to Unsolved Mysteries", mysteries_path %>

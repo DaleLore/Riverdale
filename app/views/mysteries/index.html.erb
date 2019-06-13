@@ -1,0 +1,13 @@
+<h1> Unsolved Mysteries of Riverdale High </h1>
+
+<ul>
+    <% @mysteries.each do |mystery| %>
+    <li>
+        <%= link_to mystery.name, mystery_path(mystery)  %>
+    </li>
+    <% end %>
+</ul>
+
+
+
+<h3><%= link_to "Create a Mystery", new_mystery_path%></h3>
