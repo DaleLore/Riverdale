@@ -16,7 +16,7 @@ class MysteriesController < ApplicationController
     def create
         @mystery = Mystery.create(mystery_params)
         if @mystery.valid?
-            redirect_to student_path(mystery.student)
+            redirect_to @mystery
         else
             render :new
         end
@@ -41,7 +41,7 @@ class MysteriesController < ApplicationController
     private
 
     def mystery_params
-        params.require(:mystery).permit(:name, :student_id, :solved)
+        params.require(:mystery).permit(:name)
     end
 
 

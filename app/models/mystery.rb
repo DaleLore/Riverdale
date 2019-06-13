@@ -1,6 +1,6 @@
 class Mystery < ApplicationRecord
-    belongs_to :student
+    has_many :student_mysteries
+    has_many :students, through: :student_mysteries
 
     validates :name, presence: true
-    validates :student_id, presence: true
 end

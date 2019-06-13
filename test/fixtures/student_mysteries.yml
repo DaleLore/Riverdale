@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  student_id: 1
-  mystery_id: 1
+  student: one
+  mystery: one
+  solved: false
 
 two:
-  student_id: 1
-  mystery_id: 1
+  student: two
+  mystery: two
+  solved: false

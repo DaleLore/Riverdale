@@ -10,14 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_12_234813) do
+ActiveRecord::Schema.define(version: 2019_06_13_023552) do
 
   create_table "mysteries", force: :cascade do |t|
     t.string "name"
-    t.integer "student_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "student_mysteries", force: :cascade do |t|
+    t.integer "student_id"
+    t.integer "mystery_id"
     t.boolean "solved", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mystery_id"], name: "index_student_mysteries_on_mystery_id"
+    t.index ["student_id"], name: "index_student_mysteries_on_student_id"
   end
 
   create_table "students", force: :cascade do |t|

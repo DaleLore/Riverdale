@@ -1,0 +1,2 @@
+module StudentMysteriesHelper
+end

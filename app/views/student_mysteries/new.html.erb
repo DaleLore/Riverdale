@@ -1,0 +1,15 @@
+<h1> Who's is working on solving the mystery?</h1>
+
+<%=form_for @student_mystery do |f|%>
+
+<%=f.label :student %>
+<%= f.collection_select :student_id, @students, :id, :name %><br><br>
+
+<%=f.label :mystery %>
+<%=f.collection_select :mystery_id, @mysteries, :id, :name %><br><br>
+
+<%=f.label :solved %>
+<%=f.check_box :solved %>
+
+<%= f.submit value="Start solving gang!"%>
+<% end %>

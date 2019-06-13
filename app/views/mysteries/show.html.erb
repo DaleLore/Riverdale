@@ -3,7 +3,9 @@
 
 Who is involved?
 <br>
-<%= link_to @mystery.student.name, student_path(@mystery.student) if @mystery.student%>
+<% @mystery.students.each do |student| %>
+    <%= link_to student.name, student_path(student) %>
+<% end %>
 <br>
 <br>
 What is the mystery!??!?!
@@ -16,4 +18,6 @@ We don't know
 <%= button_to "Delete #{@mystery.name}", @mystery, method: :delete, data: {confirm: "Honestly it's for the best"} %>
 
 <br><br>
-<%= link_to "Back to Unsolved Mysteries", mysteries_path %>
+<h4><%= link_to "Back to Unsolved Mysteries", mysteries_path %></h4>
+<h5> <%= link_to "Back to Riverdale High", students_path %> </h5>
+
