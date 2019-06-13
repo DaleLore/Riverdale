@@ -1,24 +1,16 @@
 # README
+This was a pairing exercise for AccessLabs//FlatIron. My amazing partner/client was Rachel Rath gave me this fabulous idea to do Riverdale and ta da! The fruit of my labor. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+README(deliverables) Pairing Exercise:
+You partner is your client they will decide the **TOPIC** of the project,the **ASSOCIATIONS** and write out deliverables for you using the following guidelines:
 
-* Ruby version
+- At least **TWO** models
+- Full CRUD on at least **ONE** model
+- At least **TWO** validations
+- Use at least **ONE** of the following:
+ 1. Collection select (recommended)
+ 2. Radio Buttons
+ 3. Check Boxes
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You should generate a new project based on the deliverables given by your partner using `rails new`
